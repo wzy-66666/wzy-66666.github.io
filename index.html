@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内蒙古奶蛙大学 | Inner Mongolia Milk Frog University</title>
+<meta name="description" content="内蒙古奶蛙大学（网友虚构娱乐站点，非真实院校）：吉祥物是那个捧腹大笑的奶蛙，附内蒙古大学官网入口。">
+<meta name="keywords" content="内蒙古奶蛙大学,奶蛙,流动奶蛙,黄色三幻神,内蒙古大学">
+<style>
+  :root{
+    --milk:#f7f4ec;
+    --frog:#3f7d4e;
+    --frog-deep:#245239;
+    --frog-light:#8fc79b;
+    --mud:#6b5a45;
+    --gold:#f2c531;
+    --gold-deep:#c9a227;
+    --ink:#22301f;
+    --card:#ffffff;
+    --shadow:0 10px 30px rgba(36,82,57,.14);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--milk);
+    line-height:1.85;
+  }
+  a{color:var(--frog-deep);}
+  img{max-width:100%;display:block;}
+
+  /* ============ 顶部提示 ============ */
+  .notice{
+    background:var(--gold);
+    color:#3a2c00;
+    font-size:14px;
+    text-align:center;
+    padding:8px 14px;
+    font-weight:600;
+    letter-spacing:.3px;
+  }
+
+  /* ============ 导航 ============ */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:2px solid var(--gold);
+  }
+  .nav{
+    max-width:1120px;margin:0 auto;padding:10px 18px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--frog-deep);text-decoration:none;}
+  .brand svg{width:38px;height:38px;flex:none;}
+  .nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  .nav ul a{
+    text-decoration:none;color:var(--frog-deep);font-size:15px;
+    padding:5px 10px;border-radius:999px;
+  }
+  .nav ul a:hover{background:#fdf3cf;}
+  .nav .cta{margin-left:auto;}
+
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:700;
+    padding:10px 18px;border-radius:999px;
+    background:var(--frog);color:#fff;border:2px solid var(--frog);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+  .btn.ghost{background:#fff;color:var(--frog-deep);}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:#3a2c00;}
+  .btn.big{font-size:19px;padding:16px 30px;}
+
+  /* ============ 首屏 ============ */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(1200px 380px at 80% -60px, #fdf0bf 0%, transparent 60%),
+      linear-gradient(180deg,#ffffff 0%, #fffbe9 100%);
+    border-bottom:1px solid #f0e6c4;
+  }
+  .hero-inner{
+    max-width:1120px;margin:0 auto;padding:56px 18px 48px;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;
+  }
+  .hero h1{margin:0 0 6px;font-size:40px;line-height:1.25;color:var(--frog-deep);letter-spacing:1px;}
+  .hero .en{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--mud);margin-bottom:16px;}
+  .hero p.lead{font-size:17px;margin:0 0 18px;color:#33452f;}
+  .motto{
+    display:inline-block;background:#fff;border:2px dashed var(--gold-deep);
+    border-radius:12px;padding:8px 16px;font-weight:800;color:#8a6a06;letter-spacing:4px;
+  }
+  .hero-figure{margin:0;text-align:center;}
+  .hero-figure img{
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    border:6px solid #fff;aspect-ratio:1/1;object-fit:cover;width:100%;max-width:440px;margin:0 auto;
+    background:#fff;
+  }
+  .hero-figure figcaption{font-size:13px;color:var(--mud);margin-top:8px;}
+
+  /* ============ 通用区块 ============ */
+  main{max-width:1120px;margin:0 auto;padding:0 18px 40px;}
+  section{padding:46px 0 8px;}
+  h2.title{
+    font-size:26px;color:var(--frog-deep);margin:0 0 6px;
+    display:flex;align-items:center;gap:10px;
+  }
+  h2.title::before{
+    content:"";width:10px;height:26px;border-radius:4px;background:var(--gold);display:inline-block;
+  }
+  .sub{color:var(--mud);font-size:15px;margin:0 0 22px;}
+  .grid{display:grid;gap:18px;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .g2{grid-template-columns:repeat(2,1fr);}
+
+  .card{
+    background:var(--card);border-radius:var(--radius);padding:20px 22px;
+    box-shadow:0 6px 18px rgba(36,82,57,.08);
+    border:1px solid #ece5d0;
+  }
+  .card h3{margin:0 0 8px;font-size:18px;color:var(--frog-deep);}
+  .card p{margin:0;font-size:15px;color:#3b4a38;}
+  .card .emoji{font-size:24px;display:block;margin-bottom:6px;}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .stat{
+    background:linear-gradient(180deg,#ffffff,#fffaeb);
+    border:1px solid #f0e6c4;border-radius:var(--radius);
+    padding:16px;text-align:center;
+  }
+  .stat b{display:block;font-size:26px;color:var(--gold-deep);letter-spacing:.5px;}
+  .stat span{font-size:13px;color:var(--mud);}
+  .stat small{display:block;font-size:12px;color:#a09a86;margin-top:4px;}
+
+  /* ============ 图文并排 ============ */
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;}
+  .split figure{margin:0;}
+  .split img{border-radius:var(--radius);border:5px solid #fff;box-shadow:var(--shadow);width:100%;}
+  .split figcaption{font-size:13px;color:var(--mud);margin-top:8px;text-align:center;}
+
+  /* ============ 图鉴 ============ */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  figure.frog{
+    margin:0;background:#fff;border-radius:var(--radius);overflow:hidden;
+    border:1px solid #ece5d0;box-shadow:0 6px 18px rgba(36,82,57,.08);
+  }
+  figure.frog img{aspect-ratio:1/1;object-fit:contain;width:100%;background:#fffdf2;padding:6px;}
+  figure.frog.photo img{object-fit:cover;background:#eef6ee;padding:0;}
+  figure.frog figcaption{padding:10px 14px;font-size:13px;color:var(--mud);}
+
+  /* ============ 大按钮区 ============ */
+  .link-hall{
+    background:linear-gradient(180deg,#245239,#3f7d4e);
+    border-radius:26px;padding:38px 26px;text-align:center;color:#eaf6ec;
+    box-shadow:var(--shadow);
+  }
+  .link-hall h2{color:#fff;margin:0 0 8px;font-size:26px;}
+  .link-hall p{margin:0 auto 22px;max-width:660px;color:#d6ead9;font-size:15px;}
+  .link-hall .btn.big{
+    background:#ffd94a;color:#2c2000;border-color:#ffd94a;font-size:20px;
+    box-shadow:0 10px 26px rgba(0,0,0,.25);
+  }
+  .link-hall .btn.big:hover{background:#ffe57a;border-color:#ffe57a;}
+  .link-hall .url{margin-top:14px;font-size:13px;color:#bcd9c1;word-break:break-all;}
+  .link-hall .tip{margin-top:10px;font-size:13px;color:#ffe9a8;}
+
+  /* ============ 校歌 / 时间线 ============ */
+  .lyric{
+    white-space:pre-line;background:#fffaeb;border-left:6px solid var(--gold);
+    border-radius:12px;padding:18px 22px;font-size:15px;color:#3b4a38;
+  }
+  .timeline{list-style:none;margin:0;padding:0;}
+  .timeline li{position:relative;padding:0 0 18px 26px;border-left:2px dashed var(--frog-light);}
+  .timeline li:last-child{border-left-color:transparent;padding-bottom:0;}
+  .timeline li::before{
+    content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;
+    background:var(--gold);border:3px solid #fff;box-shadow:0 0 0 2px var(--gold-deep);
+  }
+  .timeline b{color:var(--frog-deep);}
+
+  /* ============ 页脚 ============ */
+  footer.site{
+    background:#1d3b2a;color:#c8ddcc;margin-top:30px;
+    padding:34px 18px 26px;font-size:14px;
+  }
+  .foot-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px;}
+  footer.site h4{color:#fff;margin:0 0 10px;font-size:16px;}
+  footer.site a{color:#a8e0b4;text-decoration:none;}
+  footer.site a:hover{text-decoration:underline;}
+  footer.site ul{list-style:none;margin:0;padding:0;}
+  footer.site li{margin-bottom:6px;}
+  .copyright{
+    max-width:1120px;margin:24px auto 0;padding-top:16px;
+    border-top:1px solid rgba(255,255,255,.15);font-size:13px;color:#9dbba4;text-align:center;
+  }
+
+  @media (max-width:900px){
+    .hero-inner,.split{grid-template-columns:1fr;padding-top:36px;}
+    .split{padding-top:0;}
+    .hero h1{font-size:30px;}
+    .g3,.g4,.gallery,.stats,.foot-inner{grid-template-columns:1fr 1fr;}
+    .g2{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .g3,.g4,.gallery,.stats,.foot-inner{grid-template-columns:1fr;}
+    .nav .cta{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= 顶部提示 ================= -->
+<div class="notice">
+  ⚠️ 「内蒙古奶蛙大学」为网友娱乐虚构校名，并非真实院校，与内蒙古大学无隶属关系 · 内蒙古大学官网入口在页面下方
+</div>
+
+<!-- ================= 导航 ================= -->
+<header class="site">
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <!-- 校徽：奶蛙头（内联 SVG，原创绘制，无需图片文件） -->
+      <svg viewBox="0 0 64 64" role="img" aria-label="内蒙古奶蛙大学校徽">
+        <circle cx="32" cy="32" r="30" fill="#f2c531" stroke="#245239" stroke-width="3"/>
+        <ellipse cx="32" cy="41" rx="15.5" ry="17" fill="#eeb61c" stroke="#fff" stroke-width="2.4"/>
+        <ellipse cx="32" cy="47" rx="9" ry="8.5" fill="#fdf3d7"/>
+        <circle cx="25" cy="27" r="5.6" fill="#fffdf2"/>
+        <circle cx="39" cy="27" r="5.6" fill="#fffdf2"/>
+        <circle cx="25" cy="27.5" r="3.3" fill="#6fbf4a"/>
+        <circle cx="39" cy="27.5" r="3.3" fill="#6fbf4a"/>
+        <circle cx="25" cy="27.8" r="1.6" fill="#22301f"/>
+        <circle cx="39" cy="27.8" r="1.6" fill="#22301f"/>
+        <path d="M26 37.5h12" stroke="#c08d10" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      内蒙古奶蛙大学
+    </a>
+    <ul>
+      <li><a href="#about">学校概况</a></li>
+      <li><a href="#flow">流动奶蛙</a></li>
+      <li><a href="#atlas">奶蛙图鉴</a></li>
+      <li><a href="#standee">立牌打卡</a></li>
+      <li><a href="#links">官方入口</a></li>
+    </ul>
+    <span class="cta"><a class="btn" href="https://www.imu.edu.cn/" target="_blank" rel="noopener">进入内蒙古大学官网 →</a></span>
+  </nav>
+</header>
+
+<!-- ================= 首屏 ================= -->
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <h1>内蒙古奶蛙大学</h1>
+      <div class="en">Inner Mongolia Milk Frog University</div>
+      <p class="lead">
+        本校唯一的吉祥物，是一只黄色梨形身体、乳白色肚皮、绿色大眼睛、一字嘴的生物。
+        它不会说话，不会解决问题，核心动作只有一个——<b>捧腹大笑</b>。
+      </p>
+      <div class="motto">求真务实 · 捧腹大笑</div>
+      <p style="margin-top:20px;">
+        <a class="btn gold" href="#atlas">先看看奶蛙</a>
+        <a class="btn ghost" href="#links" style="margin-left:8px;">前往内蒙古大学官网</a>
+      </p>
+    </div>
+    <figure class="hero-figure">
+      <img src="images/naiwa-hero.jpg" alt="奶蛙捧腹大笑"
+           onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 600%22%3E%3Crect width=%22600%22 height=%22600%22 fill=%22%23fffbe9%22/%3E%3Ctext x=%22300%22 y=%22300%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%23c9a227%22%3E%E5%A5%B6%E8%9B%99%E5%9B%BE%E7%89%87%E5%8D%A0%E4%BD%8D%3C/text%3E%3C/svg%3E';">
+      <figcaption>本校吉祥物「奶蛙」：黄色梨形身体、乳白肚皮、绿色大眼睛、一字嘴，唯一指定动作是捧腹大笑</figcaption>
+    </figure>
+  </div>
+</div>
+
+<main>
+
+  <!-- ================= 学校概况 ================= -->
+  <section id="about">
+    <h2 class="title">学校概况</h2>
+    <p class="sub">1957 年建校（与内蒙古大学同年，但校区在一片荷叶上），吉祥物是一只只会捧腹大笑的黄色生物。</p>
+
+    <div class="grid g2" style="margin-bottom:18px;">
+      <div class="card">
+        <h3>🐸 什么叫奶蛙</h3>
+        <p>
+          奶蛙不属于任何一部作品。它最初是网友拿动画角色「奶龙」做 AI 二创时，模型把身体渲染畸变、
+          腹部膨大、四肢变细，意外长出了一副青蛙相，于是得名「奶蛙」。
+          它没有官方设定，也没有出品方，所以不属于任何人——也因此属于所有人。
+          后来它和牛来、美团袋鼠一起，被网友并称「<b>黄色三幻神</b>」。
+        </p>
+      </div>
+      <div class="card">
+        <h3>📍 校区地址</h3>
+        <p>
+          北疆草原湿地校区（荷叶湖 3 号荷叶），邮编 010021（与内蒙古大学同城同邮编，纯属巧合）。
+          校区分三期建设：一期一片荷叶，二期两片荷叶，三期——还在下雨，等水位。
+          校内交通靠走，校际交通靠被搬。
+        </p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>2 米</b><span>立牌高度</span><small>本校“参考身高”</small></div>
+      <div class="stat"><b>100+</b><span>已打卡高校</span><small>数字还在增加</small></div>
+      <div class="stat"><b>0 人</b><span>与它对视能绷住的</span><small>截至今日，无人通过</small></div>
+      <div class="stat"><b>1 个</b><span>全部校训动作</span><small>捧腹大笑</small></div>
+    </div>
+  </section>
+
+  <!-- ================= 流动奶蛙 ================= -->
+  <section id="flow">
+    <h2 class="title">流动奶蛙</h2>
+    <p class="sub">本校最著名的校园现象：它今天在阳台，明天在操场，后天在绿化带。</p>
+
+    <div class="split" style="margin-bottom:22px;">
+      <div class="card">
+        <h3>它是怎么在校园里流动起来的</h3>
+        <p>
+          秘密藏在立牌背面。最初是手写的通知，把立牌称作「流动奶龙」，告诉发现者可以把它搬到校园的其他位置；
+          后来手写升级成打印版的小贴士，还叠上了规范提示——
+          「<b>请勿放置于教学区域、宿舍楼内部、消防通道等影响正常秩序或安全的位置</b>」。
+        </p>
+        <p style="margin-top:10px;">
+          于是搬运变成了一场接力：发现、搬走、拍照、发帖，梗从线上回到线下，再反哺回线上。
+          按照本校校史记载，这套机制已经让奶蛙在近百所高校里留下了目击报告。
+        </p>
+      </div>
+      <figure>
+        <img src="images/naiwa-military.jpg" alt="混进军训方阵的奶蛙">
+        <figcaption>本校“在校生”混进军训方阵：与环境色完美融合，且一直在笑</figcaption>
+      </figure>
+    </div>
+
+    <div class="grid g3">
+      <div class="card"><h3>🚩 军训附加难度</h3><p>挑战和奶蛙对视不笑。它一字嘴，你绷不住；它捧腹大笑，你还是绷不住。</p></div>
+      <div class="card"><h3>🧭 刷新位置</h3><p>宿舍阳台、军训操场、绿化带、图书馆外、楼梯间——位置随机，规律是没有规律。</p></div>
+      <div class="card"><h3>🐂 老前辈</h3><p>四川农业大学的「搬牛」传统已持续近 20 年。牛是川农的，奶蛙是大家的。</p></div>
+    </div>
+  </section>
+
+  <!-- ================= 奶蛙图鉴 ================= -->
+  <section id="atlas">
+    <h2 class="title">奶蛙图鉴</h2>
+    <p class="sub">黄色梨形身体、乳白肚皮、绿色大眼睛、一字嘴。全部表情里，最经典的是那个笑。</p>
+    <div class="gallery" id="frog-gallery">
+      <figure class="frog">
+        <img src="images/naiwa-hero.jpg" alt="奶蛙捧腹大笑" loading="lazy">
+        <figcaption>① 捧腹大笑：唯一指定动作</figcaption>
+      </figure>
+      <figure class="frog">
+        <img src="images/naiwa-military.jpg" alt="军训中的奶蛙" loading="lazy">
+        <figcaption>② 军训限定：站在方阵后面笑得比谁都开心</figcaption>
+      </figure>
+      <figure class="frog">
+        <img src="images/naiwa-think.png" alt="奶蛙托腮" loading="lazy">
+        <figcaption>③ 托腮：一字嘴的最高境界是似笑非笑</figcaption>
+      </figure>
+      <figure class="frog">
+        <img src="images/naiwa-stickers.jpg" alt="奶蛙表情包四格" loading="lazy">
+        <figcaption>④ 表情包四格：托腮、撇嘴、起舞、打招呼</figcaption>
+      </figure>
+      <figure class="frog">
+        <img src="images/naiwa-gold.jpg" alt="金色奶蛙" loading="lazy">
+        <figcaption>⑤ 「别碰本尊手机」金色限定版</figcaption>
+      </figure>
+      <figure class="frog">
+        <img src="images/naiwa-dark.jpg" alt="黑色奶蛙" loading="lazy">
+        <figcaption>⑥ 「别碰本尊手机」暗夜限定版</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 立牌打卡 ================= -->
+  <section id="standee">
+    <h2 class="title">立牌打卡</h2>
+    <p class="sub">本校“校友”在全国高校的目击记录（图片来自公开报道）。</p>
+    <div class="gallery" id="standee-gallery">
+      <figure class="frog photo">
+        <img src="images/standee-1.png" alt="宿舍阳台上的奶蛙立牌" loading="lazy">
+        <figcaption>① 宿舍阳台：路过的同学瞬间忘记自己本来要干什么</figcaption>
+      </figure>
+      <figure class="frog photo">
+        <img src="images/standee-2.png" alt="军训场外的奶蛙立牌" loading="lazy">
+        <figcaption>② 军训场外：整场军训被附加了「对视不笑」难度</figcaption>
+      </figure>
+      <figure class="frog photo">
+        <img src="images/standee-3.png" alt="戴迷彩帽的奶蛙立牌" loading="lazy">
+        <figcaption>③ 迷彩帽限定：网友评价「迷彩帽真是点睛之笔」</figcaption>
+      </figure>
+      <figure class="frog photo">
+        <img src="images/standee-4.png" alt="校园各处刷新的奶蛙立牌" loading="lazy">
+        <figcaption>④ 同一所学校的不同位置：它总在你意想不到的地方刷新</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 校园生活 ================= -->
+  <section id="campus">
+    <h2 class="title">校园生活</h2>
+    <p class="sub">课表里最重要的一门是憋笑。</p>
+    <div class="grid g4">
+      <div class="card"><h3>🍽 食堂</h3><p>招牌菜：蚊虫小炒。二楼供应奶白浓汤（成分保密，本校食堂其实不存在）。</p></div>
+      <div class="card"><h3>🏊 体育</h3><p>必修课《蛙泳》与《对视 30 秒不笑》，后者挂科率 100%。</p></div>
+      <div class="card"><h3>🎓 毕业</h3><p>毕业要求：在立牌前拍一张照，并成功憋住不笑。至今无人达成。</p></div>
+      <div class="card"><h3>💼 就业</h3><p>主要去向：阳台、操场、绿化带、楼梯间，以及别人的表情包收藏夹。</p></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:20px;">
+      <div class="card">
+        <h3>🎼 校歌《奶蛙之歌》（节选）</h3>
+        <div class="lyric">黄色的身体，乳白的肚，
+北疆的风吹过我的立牌。
+不鸣则已，一鸣难绷，
+挪我半米，也算远行。
+
+求真务实，捧腹大笑，
+一字嘴的沉默不慌不忙。
+你若问我，何处故乡，
+刷新出来的地方，就是课堂。</div>
+      </div>
+      <div class="card">
+        <h3>📣 招生简章（摘要）</h3>
+        <p>
+          · 招生对象：蝌蚪及已完成变态发育者<br>
+          · 考试科目：憋笑（100 分）、搬立牌（100 分）、找到它（必考）<br>
+          · 学费：每天 3 只蚊虫，支持「分期付款、按顿结算」<br>
+          · 奖学金：荷叶奖学金（覆盖一片荷叶的住宿费）<br>
+          · <b>特别声明：本校无招生代码，以上内容仅供娱乐。</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>📖 校史春秋（虚构版）</h3>
+      <ul class="timeline">
+        <li><b>1957 年</b>：一场大雨后，第一只奶蛙出现在荷叶上，本校宣告成立。</li>
+        <li><b>2024 年</b>：它在一次 AI 渲染事故里诞生，腹部膨大、四肢变细，从此有了名字。</li>
+        <li><b>2026 年</b>：它被做成立牌，开始在全国高校里被搬来搬去，「流动奶蛙」正式成军。</li>
+        <li><b>同年</b>：它与牛来、美团袋鼠并称「黄色三幻神」，成为年度最醒目的黄色符号。</li>
+        <li><b>今天</b>：它就在你学校某个你意想不到的位置，并且一直在笑。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 官方入口 ================= -->
+  <section id="links">
+    <div class="link-hall">
+      <h2>本站与真·内蒙古大学</h2>
+      <p>
+        「内蒙古奶蛙大学」是网友的玩笑，但<b>内蒙古大学</b>是真实存在的国家「双一流」建设高校，
+        位于内蒙古呼和浩特市，1957 年建校。想了解真正的大学，请看这里：
+      </p>
+      <a class="btn big" href="https://www.imu.edu.cn/" target="_blank" rel="noopener">
+        👉 点击进入内蒙古奶蛙大学（内蒙古大学）
+      </a>
+      <div class="url">https://www.imu.edu.cn/</div>
+      <div class="tip">（点击后在新窗口打开内蒙古大学官方网站，不是本娱乐站点）</div>
+      <p style="margin-top:26px;">
+        <a class="btn ghost" href="https://www.imu.edu.cn/ndgk/ndjj.htm" target="_blank" rel="noopener">内蒙古大学简介</a>
+        <a class="btn ghost" href="https://zhaosheng.imu.edu.cn/" target="_blank" rel="noopener" style="margin-left:8px;">本科招生网</a>
+        <a class="btn ghost" href="https://news.imu.edu.cn/" target="_blank" rel="noopener" style="margin-left:8px;">内大新闻网</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 关于本站 ================= -->
+  <section id="about-site">
+    <h2 class="title">关于本站</h2>
+    <div class="card">
+      <p>
+        本站是娱乐性质的虚构网页作品。「内蒙古奶蛙大学」为杜撰校名，<b>不是真实院校，也不代表内蒙古大学的任何立场或信息</b>，
+        页面的校史、招生、院系与数据均为玩笑内容。页面中指向 imu.edu.cn 的链接均为内蒙古大学真实官方网站。
+      </p>
+      <p style="margin-top:12px;">
+        图片来源：奶蛙表情图来自公开网络；校园立牌照片来自游戏媒体《流动奶蛙，大学最好的招生简章》相关公开报道。
+        本站为非商业性的玩梗与学习作品。校徽为本站原创内联 SVG。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer class="site">
+  <div class="foot-inner">
+    <div>
+      <h4>内蒙古奶蛙大学（虚构）</h4>
+      <p style="margin:0;">Inner Mongolia Milk Frog University<br>
+      校址：北疆草原湿地校区 · 荷叶湖 3 号荷叶<br>
+      邮箱：naigua@example.com（无人接收，因为蛙在笑）</p>
+    </div>
+    <div>
+      <h4>站内导航</h4>
+      <ul>
+        <li><a href="#about">学校概况</a></li>
+        <li><a href="#flow">流动奶蛙</a></li>
+        <li><a href="#atlas">奶蛙图鉴</a></li>
+        <li><a href="#standee">立牌打卡</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>真实链接</h4>
+      <ul>
+        <li><a href="https://www.imu.edu.cn/" target="_blank" rel="noopener">内蒙古大学官网 ↗</a></li>
+        <li><a href="https://www.imu.edu.cn/ndgk/ndjj.htm" target="_blank" rel="noopener">内大简介 ↗</a></li>
+        <li><a href="https://zhaosheng.imu.edu.cn/" target="_blank" rel="noopener">内大招生网 ↗</a></li>
+        <li><a href="https://news.imu.edu.cn/" target="_blank" rel="noopener">内大新闻网 ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    © <span id="year">2026</span> 内蒙古奶蛙大学（网友娱乐虚构站点）· 与内蒙古大学无隶属关系 ·
+    本站仅作学习与娱乐用途，所有玩笑内容请勿当真
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 图片加载失败时用内联 SVG 占位，避免 GitHub Pages 上出现破图
+  var placeholder = "data:image/svg+xml;utf8," + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">' +
+    '<rect width="400" height="400" fill="#fffbe9"/>' +
+    '<ellipse cx="200" cy="215" rx="86" ry="104" fill="#eeb61c"/>' +
+    '<ellipse cx="200" cy="255" rx="52" ry="50" fill="#fdf3d7"/>' +
+    '<circle cx="168" cy="150" r="30" fill="#fffdf2"/><circle cx="232" cy="150" r="30" fill="#fffdf2"/>' +
+    '<circle cx="168" cy="152" r="17" fill="#6fbf4a"/><circle cx="232" cy="152" r="17" fill="#6fbf4a"/>' +
+    '<circle cx="168" cy="153" r="8" fill="#22301f"/><circle cx="232" cy="153" r="8" fill="#22301f"/>' +
+    '<path d="M172 196h56" stroke="#c08d10" stroke-width="7" stroke-linecap="round"/>' +
+    '<text x="200" y="360" font-size="24" text-anchor="middle" fill="#c9a227">奶蛙图片占位</text>' +
+    '</svg>'
+  );
+  document.querySelectorAll('.gallery img, .split img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      if (img.dataset.fallback) return;
+      img.dataset.fallback = '1';
+      img.src = placeholder;
+    });
+    if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event('error'));
+  });
+</script>
+</body>
+</html>
